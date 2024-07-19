@@ -28,11 +28,10 @@ app.use((req, res) => {
 db.connect(error => {
 	if (error){
 		console.log(error)
-
 		return
 	}
 
-	app.listen(port, () => {
+	app.listen(port, async() => {
 		console.log("Server is running")
 	})
 })

@@ -1,13 +1,15 @@
 const { Router } = require("express")
+const { getUserProfile, register, login } = require("../controllers/userController")
+const verifyTokenMiddlware = require("../middlewares/verifyTokenMiddleware")
 
 const userRouter = Router()
 
-userRouter.get("/", )
+userRouter.get("/", verifyTokenMiddlware, getUserProfile)
 
-userRouter.post("/register", )
+userRouter.post("/register", register)
 
-userRouter.post("/login", )
+userRouter.post("/login", login)
 
-userRouter.patch("/", )
+// userRouter.patch("/", )
 
 module.exports = userRouter
