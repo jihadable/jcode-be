@@ -1,5 +1,6 @@
 const { hash } = require("bcrypt")
 const db = require("./database")
+const { v4 } = require("uuid")
 
 require("dotenv").config()
 
@@ -22,7 +23,7 @@ const userSeeder = async() => {
 }
 
 const problemSeed = async() => {
-    const query = "INSERT INTO problems (title, description, difficulty) VALUES (?, ?, ?)"
+    const query = "INSERT INTO problems (slug, title, description, difficulty) VALUES (?, ?, ?, ?)"
 
     const problems = [
         {
@@ -137,7 +138,10 @@ const problemSeed = async() => {
     ]
 
     problems.forEach(problem => {
+        const slug = v4()
+
         db.query(query, [
+            slug,
             problem.title,
             problem.description,
             problem.difficulty

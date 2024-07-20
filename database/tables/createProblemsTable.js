@@ -8,6 +8,7 @@ const createProblemsTable = () => {
     const createQuery = 
     `CREATE TABLE problems (
         id              INT AUTO_INCREMENT PRIMARY KEY,
+        slug            VARCHAR(255) NOT NULL UNIQUE,
         title           VARCHAR(255) NOT NULL,
         description     TEXT NOT NULL,
         difficulty      VARCHAR(255) NOT NULL,
