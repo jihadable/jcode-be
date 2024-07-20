@@ -1,12 +1,11 @@
-const { hash } = require("bcrypt")
 const db = require("../database/database")
 
 // user
-// id
-// name
-// email
-// password
-// bio
+// +id
+// +name
+// +email
+// +password
+// +bio
 
 const User = {
     async findById(id){

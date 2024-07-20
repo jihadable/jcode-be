@@ -13,7 +13,9 @@ const createSubmissionsTable = () => {
         language    VARCHAR(255) NOT NULL,
         code        TEXT NOT NULL,
         status      VARCHAR(255) NOT NULL,
-        date        DATE NOT NULL
+        date        DATE NOT NULL,
+        created_at  TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+        updated_at  TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
     )`
 
     db.query(createQuery)

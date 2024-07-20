@@ -10,7 +10,9 @@ const createTestCasesTable = () => {
         id                  INT AUTO_INCREMENT PRIMARY KEY,
         problem_id          INT NOT NULL,
         input               VARCHAR(255) NOT NULL,
-        expected_output     VARCHAR(255) NOT NULL
+        expected_output     VARCHAR(255) NOT NULL,
+        created_at  TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+        updated_at  TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
     )`
 
     db.query(createQuery)
