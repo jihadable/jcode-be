@@ -51,9 +51,10 @@ const problemSeed = async() => {
                             <b>Penjelasan: </b> 1 + 2 + 3 = 6
                         </div>
                     </div>
+                    <br>
                     <div>
                         <h4>Contoh 2</h4>
-                        <div style="margin-left: .5rem;">
+                        <div style="padding-left: .5rem; border-left: 1px solid #ddd;">
                             <b>Input: </b> n = 5
                             <br>
                             <b>Output: </b> 11
@@ -116,9 +117,10 @@ const problemSeed = async() => {
                             <b>Penjelasan: </b> M + B = H
                         </div>
                     </div>
+                    <br>
                     <div>
                         <h4>Contoh 2</h4>
-                        <div style="margin-left: .5rem;">
+                        <div style="padding-left: .5rem; border-left: 1px solid #ddd;">
                             <b>Input: </b> barisWarna = [B, K, H]
                             <br>
                             <b>Output: </b> M
