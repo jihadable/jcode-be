@@ -26,7 +26,7 @@ const getUserProfile = async(req, res) => {
 
 const register = async(req, res) => {
     const registerSchema = Joi.object({
-        name: Joi.string().required(),
+        username: Joi.string().required(),
         email: Joi.string().email().required(),
         password: Joi.string().min(8).required()
     })

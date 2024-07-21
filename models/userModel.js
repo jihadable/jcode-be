@@ -9,7 +9,7 @@ const db = require("../database/database")
 
 const User = {
     async findById(id){
-        const query = "SELECT name, email, bio FROM users WHERE id = ?"
+        const query = "SELECT username, email, bio FROM users WHERE id = ?"
 
         const [rows] = await db.promise().query(query, [id])
 
@@ -25,11 +25,11 @@ const User = {
     },
 
     async create(user){
-        const insertQuery = "INSERT INTO users (name, email, password) VALUES (?, ?, ?)"
-        const [insertResult] = await db.promise().query(insertQuery, [user.name, user.email, user.password])
+        const insertQuery = "INSERT INTO users (username, email, password) VALUES (?, ?, ?)"
+        const [insertResult] = await db.promise().query(insertQuery, [user.username, user.email, user.password])
 
         const id = insertResult.insertId
-        const selectQuery = "SELECT id, name, email, bio FROM users WHERE id = ?"
+        const selectQuery = "SELECT id, username, email, bio FROM users WHERE id = ?"
         const [rows] = await db.promise().query(selectQuery, [id])
 
         return rows[0]
@@ -39,7 +39,7 @@ const User = {
         const updateQuery = "UPDATE users SET bio = ? WHERE id = ?"
         db.query(updateQuery, [bio, id])
 
-        const selectQuery = "SELECT name, email, bio FROM users WHERE id = ?"
+        const selectQuery = "SELECT username, email, bio FROM users WHERE id = ?"
         const [rows] = await db.promise().query(selectQuery, [id])
 
         return rows[0]
@@ -47,7 +47,7 @@ const User = {
 
     response(user){
         return {
-            name: user.name,
+            username: user.username,
             email: user.email,
             bio: user.bio
         }

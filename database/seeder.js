@@ -10,12 +10,12 @@ const seeder = async() => {
 }
 
 const userSeeder = async() => {
-    const query = "INSERT INTO users (name, email, password, bio) VALUES (?, ?, ?, ?)"
+    const query = "INSERT INTO users (username, email, password, bio) VALUES (?, ?, ?, ?)"
 
     const hashedPassword = await hash(process.env.PRIVATE_PASSWORD, 10);
 
     db.query(query, [
-        "Umar Jihad",
+        "Jihadable",
         "umarjihad@gmail.com",
         hashedPassword,
         "test"
