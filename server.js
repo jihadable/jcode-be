@@ -1,7 +1,6 @@
 const express = require("express")
 const cors = require("cors")
 const path = require("path")
-const db = require("./database/database")
 const userRouter = require("./routes/userRoute")
 const problemRouter = require("./routes/problemRoute")
 
@@ -30,16 +29,6 @@ app.use((req, res) => {
     res.sendFile(path.join(__dirname, "views", "not-found.html"))
 })
 
-db.connect(error => {
-	if (error){
-		console.log(error)
-		return
-	}
-
-	app.listen(port, async() => {
-		// const [rows] = await db.promise().query("SELECT * FROM problems")
-		// console.log(rows)
-
-		console.log("Server is running")
-	})
+app.listen(port, () => {
+	console.log("Server is running")
 })

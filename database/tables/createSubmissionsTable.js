@@ -1,9 +1,9 @@
-const db = require("../database")
+const { db } = require("../database")
 
-const createSubmissionsTable = () => {
+const createSubmissionsTable = async() => {
     const dropQuery = "DROP TABLE IF EXISTS submissions"
 
-    db.query(dropQuery)
+    await db.query(dropQuery)
 
     const createQuery = 
     `CREATE TABLE submissions (
@@ -18,7 +18,7 @@ const createSubmissionsTable = () => {
         updated_at  TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
     )`
 
-    db.query(createQuery)
+    await db.query(createQuery)
 }
 
 module.exports = createSubmissionsTable

@@ -1,9 +1,9 @@
-const db = require("../database")
+const { db } = require("../database")
 
-const createProblemsTable = () => {
+const createProblemsTable = async() => {
     const dropQuery = "DROP TABLE IF EXISTS problems"
 
-    db.query(dropQuery)
+    await db.query(dropQuery)
 
     const createQuery = 
     `CREATE TABLE problems (
@@ -16,7 +16,7 @@ const createProblemsTable = () => {
         updated_at  TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
     )`
 
-    db.query(createQuery)
+    await db.query(createQuery)
 }
 
 module.exports = createProblemsTable

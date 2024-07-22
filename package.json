@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "nodemon server.js",
-    "migrate": "node database/migration.js"
+    "migrate": "node database/migration.js",
+    "answer": "node utils/problemAnswer.js"
   },
   "keywords": [],
   "author": "Umar Jihad",

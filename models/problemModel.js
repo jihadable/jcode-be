@@ -1,11 +1,11 @@
+const db = require("../database/database")
+
 // problem
 // +id
 // +slug
 // +title
 // +description
 // +difficulty
-
-const db = require("../database/database")
 
 const Problem = {
     async findAll(){
