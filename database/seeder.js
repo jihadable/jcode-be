@@ -159,77 +159,77 @@ const testCaseSeeder = async() => {
 
     const testCases = [
         {
-            problem_id: 1,
+            problem_id: 2,
             input: "5",
             expected_output: "11"
         },
         {
-            problem_id: 1,
+            problem_id: 2,
             input: "10",
             expected_output: "230"
         },
         {
-            problem_id: 1,
+            problem_id: 2,
             input: "15",
             expected_output: "4841"
         },
         {
-            problem_id: 1,
+            problem_id: 2,
             input: "17",
             expected_output: "16377"
         },
         {
-            problem_id: 1,
+            problem_id: 2,
             input: "20",
             expected_output: "101902"
         },
         {
-            problem_id: 2,
+            problem_id: 1,
             input: '["M"]',
             expected_output: "M"
         },
         {
-            problem_id: 2,
+            problem_id: 1,
             input: '["K", "H"]',
             expected_output: "M"
         },
         {
-            problem_id: 2,
+            problem_id: 1,
             input: '["B", "K", "M"]',
             expected_output: "B"
         },
         {
-            problem_id: 2,
+            problem_id: 1,
             input: '["H", "H", "B", "K"]',
             expected_output: "B"
         },
         {
-            problem_id: 2,
+            problem_id: 1,
             input: '["M", "M", "M", "B", "H"]',
             expected_output: "H"
         },
         {
-            problem_id: 2,
+            problem_id: 1,
             input: '["B", "M", "H", "B", "B", "K"]',
             expected_output: "K"
         },
         {
-            problem_id: 2,
+            problem_id: 1,
             input: '["K", "K", "K", "K", "K", "K", "K"]',
             expected_output: "K"
         },
         {
-            problem_id: 2,
+            problem_id: 1,
             input: '["K", "M", "K", "M", "B", "B", "H", "H"]',
             expected_output: "H"
         },
         {
-            problem_id: 2,
+            problem_id: 1,
             input: '["H", "B", "K", "M", "H", "B", "K", "M", "H"]',
             expected_output: "H"
         },
         {
-            problem_id: 2,
+            problem_id: 1,
             input: '["M", "K", "B", "H", "H", "B", "K", "M", "M", "B"]',
             expected_output: "H"
         }

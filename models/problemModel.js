@@ -1,4 +1,4 @@
-const db = require("../database/database")
+const { db } = require("../database/database")
 
 // problem
 // +id
@@ -10,13 +10,14 @@ const db = require("../database/database")
 const Problem = {
     async findAll(){
         const query = "SELECT * FROM problems"
-        const [rows] = await db.promise().query(query)
+        const [rows] = await db.query(query)
 
         return rows
     },
 
     response(problem){
         return {
+            id: problem.id,
             slug: problem.slug,
             title: problem.title,
             description: problem.description,

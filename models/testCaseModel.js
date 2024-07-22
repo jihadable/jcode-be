@@ -1,16 +1,16 @@
+const { db } = require("../database/database")
+
 // test_case
 // +id
 // +problem_id
 // +input
 // +expected_output
 
-const db = require("../database/database")
-
 const TestCase = {
     async findByProblem(problem_id){
         const query = "SELECT * FROM test_cases WHERE problem_id = ?"
 
-        const [rows] = await db.promise().query(query, [problem_id])
+        const [rows] = await db.query(query, [problem_id])
 
         return rows
     },
