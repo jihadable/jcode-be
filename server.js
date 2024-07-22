@@ -35,14 +35,12 @@ app.use((req, res) => {
 })
 
 process.on('SIGINT', () => {
-    console.log('Shutting down gracefully...')
-
     db.end(() => {
         console.log('Database connection closed.')
         process.exit(0)
     })
 })
 
-app.listen(port, () => {
+app.listen(port, async() => {
 	console.log("Server is running")
 })

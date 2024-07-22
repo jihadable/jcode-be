@@ -8,9 +8,9 @@ const port = process.env.DB_PORT
 const user = process.env.DB_USER
 const password = process.env.DB_PASSWORD
 
-const pool = mysql.createPool({
+const db = mysql.createPool({
     host, user, password, port, database,
     connectionLimit: 5
-})
+}).promise()
 
-module.exports = { db: pool.promise() }
+module.exports = { db }

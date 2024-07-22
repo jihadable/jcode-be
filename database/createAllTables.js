@@ -1,3 +1,4 @@
+const createDefaultCodesTable = require("./tables/createDefaultCodesTable")
 const createProblemsTable = require("./tables/createProblemsTable")
 const createSubmissionsTable = require("./tables/createSubmissionsTable")
 const createTestCasesTable = require("./tables/createTestCasesTable")
@@ -9,6 +10,7 @@ const createAllTables = async() => {
         createProblemsTable(),
         createTestCasesTable(),
         createSubmissionsTable(),
+        createDefaultCodesTable()
     ])
 }
 

@@ -8,7 +8,8 @@ const seeder = async() => {
     await Promise.all([
         userSeeder(),
         problemSeed(),
-        testCaseSeeder()
+        testCaseSeeder(),
+        defaultCodesSeeder()
     ])
 }
 
@@ -26,7 +27,7 @@ const userSeeder = async() => {
 }
 
 const problemSeed = async() => {
-    const query = "INSERT INTO problems (slug, title, description, difficulty) VALUES (?, ?, ?, ?)"
+    const query = "INSERT INTO problems (id, slug, title, description, difficulty) VALUES (?, ?, ?, ?, ?)"
 
     const problems = [
         {
@@ -142,10 +143,11 @@ const problemSeed = async() => {
         }
     ]
 
-    problems.forEach(async(problem) => {
+    problems.forEach(async(problem, index) => {
         const slug = v4()
 
         await db.query(query, [
+            index + 1,
             slug,
             problem.title,
             problem.description,
@@ -159,77 +161,77 @@ const testCaseSeeder = async() => {
 
     const testCases = [
         {
-            problem_id: 2,
+            problem_id: 1,
             input: "5",
             expected_output: "11"
         },
         {
-            problem_id: 2,
+            problem_id: 1,
             input: "10",
             expected_output: "230"
         },
         {
-            problem_id: 2,
+            problem_id: 1,
             input: "15",
             expected_output: "4841"
         },
         {
-            problem_id: 2,
+            problem_id: 1,
             input: "17",
             expected_output: "16377"
         },
         {
-            problem_id: 2,
+            problem_id: 1,
             input: "20",
             expected_output: "101902"
         },
         {
-            problem_id: 1,
+            problem_id: 2,
             input: '["M"]',
             expected_output: "M"
         },
         {
-            problem_id: 1,
+            problem_id: 2,
             input: '["K", "H"]',
             expected_output: "M"
         },
         {
-            problem_id: 1,
+            problem_id: 2,
             input: '["B", "K", "M"]',
             expected_output: "B"
         },
         {
-            problem_id: 1,
+            problem_id: 2,
             input: '["H", "H", "B", "K"]',
             expected_output: "B"
         },
         {
-            problem_id: 1,
+            problem_id: 2,
             input: '["M", "M", "M", "B", "H"]',
             expected_output: "H"
         },
         {
-            problem_id: 1,
+            problem_id: 2,
             input: '["B", "M", "H", "B", "B", "K"]',
             expected_output: "K"
         },
         {
-            problem_id: 1,
+            problem_id: 2,
             input: '["K", "K", "K", "K", "K", "K", "K"]',
             expected_output: "K"
         },
         {
-            problem_id: 1,
+            problem_id: 2,
             input: '["K", "M", "K", "M", "B", "B", "H", "H"]',
             expected_output: "H"
         },
         {
-            problem_id: 1,
+            problem_id: 2,
             input: '["H", "B", "K", "M", "H", "B", "K", "M", "H"]',
             expected_output: "H"
         },
         {
-            problem_id: 1,
+            problem_id: 2,
             input: '["M", "K", "B", "H", "H", "B", "K", "M", "M", "B"]',
             expected_output: "H"
         }
@@ -240,6 +242,73 @@ const testCaseSeeder = async() => {
             testCase.problem_id, 
             testCase.input,
             testCase.expected_output
+        ])
+    })
+}
+
+const defaultCodesSeeder = async() => {
+    const query = "INSERT INTO default_codes (problem_id, language, default_code) VALUES (?, ?, ?)"
+
+    const defaultCodes = [
+        {
+            problem_id: 1,
+            language: "javascript",
+            default_code: 
+            `function tribonacci(n){
+
+            }`
+        },
+        {
+            problem_id: 1,
+            language: "python",
+            default_code: 
+            `def tribonacci(n):
+                `
+        },
+        {
+            problem_id: 1,
+            language: "php",
+            default_code: 
+            `<?php
+            
+            function tribonacci($n){
+
+            }
+            `
+        },
+        {
+            problem_id: 2,
+            language: "javascript",
+            default_code: 
+            `function segitigaWarna(barisWarna){
+
+            }`
+        },
+        {
+            problem_id: 2,
+            language: "python",
+            default_code: 
+            `def segitigaWarna(barisWarna):
+                `
+        },
+        {
+            problem_id: 2,
+            language: "php",
+            default_code: 
+            `<?php
+            
+            function segitigaWarna($barisWarna){
+
+            }
+            `
+        }
+    ]
+
+    defaultCodes.forEach(async(defaultCode) => {
+        await db.query(query, [
+            defaultCode.problem_id,
+            defaultCode.language,
+            defaultCode.default_code
         ])
     })
 }

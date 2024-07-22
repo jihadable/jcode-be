@@ -1,4 +1,5 @@
 const createAllTables = require("./createAllTables")
+const { db } = require("./database")
 const seeder = require("./seeder")
 
 const migration = async() => {
@@ -6,10 +7,13 @@ const migration = async() => {
         await createAllTables()
         await seeder()
         console.log("Migration completed successfully.")
-        process.exit()
     } catch (err) {
         console.error("Migration failed.\n", err)
-        process.exit(1)
+    } finally {
+        db.end(() => {
+            console.log('Closed all pool connections.')
+            process.exit(0)
+        })
     }
 }
 
