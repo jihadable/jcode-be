@@ -21,7 +21,8 @@ const Problem = {
             slug: problem.slug,
             title: problem.title,
             description: problem.description,
-            difficulty: problem.difficulty    
+            difficulty: problem.difficulty,
+            function_name: problem.function_name  
         }
     }
 }

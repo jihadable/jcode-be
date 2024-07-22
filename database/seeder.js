@@ -27,7 +27,7 @@ const userSeeder = async() => {
 }
 
 const problemSeed = async() => {
-    const query = "INSERT INTO problems (id, slug, title, description, difficulty) VALUES (?, ?, ?, ?, ?)"
+    const query = "INSERT INTO problems (id, slug, title, description, difficulty, function_name) VALUES (?, ?, ?, ?, ?, ?)"
 
     const problems = [
         {
@@ -73,7 +73,8 @@ const problemSeed = async() => {
                     <div>• 1 <= n <= 20</div>
                 </div>
             </div>`,
-            difficulty: "Easy"
+            difficulty: "Easy",
+            function_name: "tribonacci"
         },
         {
             title: "Segitiga Warna",
@@ -139,7 +140,8 @@ const problemSeed = async() => {
                     <div>• 1 <= barisWarna.length <= 10</div>
                 </div>
             </div>`,
-            difficulty: "Medium"
+            difficulty: "Medium",
+            function_name: "segitigaWarna"
         }
     ]
 
@@ -151,7 +153,8 @@ const problemSeed = async() => {
             slug,
             problem.title,
             problem.description,
-            problem.difficulty
+            problem.difficulty,
+            problem.function_name
         ])
     })
 }
@@ -254,54 +257,25 @@ const defaultCodesSeeder = async() => {
             problem_id: 1,
             language: "javascript",
             default_code: 
-            `function tribonacci(n){
-
-            }`
+            `function tribonacci(n){\n\n}`
         },
         {
             problem_id: 1,
             language: "python",
             default_code: 
-            `def tribonacci(n):
-                `
-        },
-        {
-            problem_id: 1,
-            language: "php",
-            default_code: 
-            `<?php
-            
-            function tribonacci($n){
-
-            }
-            `
+            `def tribonacci(n):`
         },
         {
             problem_id: 2,
             language: "javascript",
-            default_code: 
-            `function segitigaWarna(barisWarna){
-
-            }`
+            default_code: `function segitigaWarna(barisWarna){\n\n}`
         },
         {
             problem_id: 2,
             language: "python",
             default_code: 
-            `def segitigaWarna(barisWarna):
-                `
+            `def segitigaWarna(barisWarna):`
         },
-        {
-            problem_id: 2,
-            language: "php",
-            default_code: 
-            `<?php
-            
-            function segitigaWarna($barisWarna){
-
-            }
-            `
-        }
     ]
 
     defaultCodes.forEach(async(defaultCode) => {

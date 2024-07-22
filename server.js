@@ -5,6 +5,7 @@ const userRouter = require("./routes/userRoute")
 const problemRouter = require("./routes/problemRoute")
 const testCaseRouter = require("./routes/testCaseRoute")
 const { db } = require("./database/database")
+const defaultCodeRouter = require("./routes/defaultCodeRoute")
 
 require("dotenv").config()
 
@@ -28,6 +29,9 @@ app.use("/api/problems", problemRouter)
 
 // test case route
 app.use("/api/test_cases", testCaseRouter)
+
+// default code route
+app.use("/api/default_codes", defaultCodeRouter)
 
 // route not found
 app.use((req, res) => {
