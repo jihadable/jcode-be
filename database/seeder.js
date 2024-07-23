@@ -36,7 +36,7 @@ const problemSeed = async() => {
             `<div>
                 <div>
                     <h3>Deskripsi</h3>
-                    <div>Ketika berkunjung ke negara Italia, Pak Samsul bertemu dengan seorang Matematikawan bernama Prof. Paulo Tribonacci. Prof Paulo ini menciptakan sebuah deret bilangan Tribonacci di mana suatu bilangan merupakan hasil penjumlahan dari 3 bilangan sebelum nya. Karena Pak Samsul adalah orang yang penasaran, Ia pun ingin mencoba menjawab deret bilangan ke-n di mana n adalah angka yang disebutkan oleh Prof Paulo. Buatlah program untuk membantu Pak Samsul menjawab deret bilangan dari setiap angka yang disebutkan Prof Paulo.</div>
+                    <div>Ketika berkunjung ke negara Italia, Pak Samsul bertemu dengan seorang Matematikawan bernama Prof. Paulo Tribonacci. Prof Paulo ini menciptakan sebuah deret bilangan Tribonacci di mana suatu bilangan merupakan hasil penjumlahan dari 3 bilangan sebelum nya. Karena Pak Samsul adalah orang yang penasaran, Ia pun ingin mencoba menjawab deret bilangan <code>ke-n</code> di mana <code>n</code> adalah angka yang disebutkan oleh Prof Paulo. Buatlah program untuk membantu Pak Samsul menjawab deret bilangan dari setiap angka yang disebutkan Prof Paulo.</div>
                 </div>
                 <br>
                 <div>
@@ -48,29 +48,29 @@ const problemSeed = async() => {
                     <div>
                         <h4>Contoh 1</h4>
                         <div style="padding-left: .5rem; border-left: 1px solid #ddd;">
-                            <b>Input: </b> n = 4
+                            <b>Input: </b> <code>n = 4</code>
                             <br>
-                            <b>Output: </b> 6
+                            <b>Output: </b> <code>6</code>
                             <br>
-                            <b>Penjelasan: </b> 1 + 2 + 3 = 6
+                            <b>Penjelasan: </b> <code>1 + 2 + 3 = 6</code>
                         </div>
                     </div>
                     <br>
                     <div>
                         <h4>Contoh 2</h4>
                         <div style="padding-left: .5rem; border-left: 1px solid #ddd;">
-                            <b>Input: </b> n = 5
+                            <b>Input: </b> <code>n = 5</code>
                             <br>
-                            <b>Output: </b> 11
+                            <b>Output: </b> <code>11</code>
                             <br>
-                            <b>Penjelasan: </b> 2 + 3 + 6 = 11
+                            <b>Penjelasan: </b> <code>2 + 3 + 6 = 11</code>
                         </div>
                     </div>
                 </div>
                 <br>
                 <div>
                     <h3>Batasan</h3>
-                    <div>• 1 <= n <= 20</div>
+                    <div>• <code>1 <= n <= 20</code></div>
                 </div>
             </div>`,
             difficulty: "Easy",
@@ -85,22 +85,22 @@ const problemSeed = async() => {
                     <div>Mawar yang merupakan anak bungsu Pak Samsul sangat gemar bermain dengan warna. Mawar sangat suka dengan warna merah, biru, kuning, dan hijau. Suatu hari, Mawar mengetahui bahwa setiap 2 warna yang dicampur akan menghasilkan warna lain. Mawar pun mencatat perubahan hasil campuran dari setiap warna favorit nya.</div>
                     <br>
                     <div>
-                        <div>
+                        <code>
                             <div>M + B = H</div>
                             <div>M + K = H</div>
                             <div>M + H = B</div>
                             <div>B + K = M</div>
                             <div>B + H = K</div>
                             <div>K + H = M</div>
-                        </div>
+                        </code>
                         <br>
-                        <div>
+                        <code>
                             <b>Keterangan:</b>
                             <div>M: Merah</div>
                             <div>B: Biru</div>
                             <div>K: Kuning</div>
                             <div>H: Hijau</div>
-                        </div>
+                        </code>
                     </div>
                     <br>
                     <div>Mengetahui hal ini, Pak Samsul berinisiatif untuk memberikan Mawar permainan warna bernama segitiga warna. Pak Samsul memberikan 1 baris berisi warna-warna favorit Mawar. Mawar lalu mencampur setiap 2 warna yang bersebelahan sampai akhir nya hanya tersisa 1 warna saja. Mawar harus bisa menjawab 1 warna terakhir tersebut dengan benar. Buatlah program untuk membantu Mawar menyelesaikan permain segitiga warna ini.</div>
@@ -115,29 +115,29 @@ const problemSeed = async() => {
                     <div>
                         <h4>Contoh 1</h4>
                         <div style="padding-left: .5rem; border-left: 1px solid #ddd;">
-                            <b>Input: </b> barisWarna = [M, B]
+                            <b>Input: </b> <code>barisWarna = [M, B]</code>
                             <br>
-                            <b>Output: </b> H
+                            <b>Output: </b> <code>H</code>
                             <br>
-                            <b>Penjelasan: </b> M + B = H
+                            <b>Penjelasan: </b> <code>M + B = H</code>
                         </div>
                     </div>
                     <br>
                     <div>
                         <h4>Contoh 2</h4>
                         <div style="padding-left: .5rem; border-left: 1px solid #ddd;">
-                            <b>Input: </b> barisWarna = [B, K, H]
+                            <b>Input: </b> <code>barisWarna = [B, K, H]</code>
                             <br>
-                            <b>Output: </b> M
+                            <b>Output: </b> <code>M</code>
                             <br>
-                            <b>Penjelasan: </b> (B + K) + (K + H) = M + M = M
+                            <b>Penjelasan: </b> <code>(B + K) + (K + H) = M + M = M</code>
                         </div>
                     </div>
                 </div>
                 <br>
                 <div>
                     <h3>Batasan</h3>
-                    <div>• 1 <= barisWarna.length <= 10</div>
+                    <div>• <code>1 <= barisWarna.length <= 10</code></div>
                 </div>
             </div>`,
             difficulty: "Medium",
@@ -149,7 +149,7 @@ const problemSeed = async() => {
             `<div>
                 <div>
                     <h3>Deskripsi</h3>
-                    <div>Pak Samsul memiliki peternakan ayam. Karena ayam-ayam yang Pak Samsul bukan lah ayam biasa, Ia pun ingin menguji salah satu ayam nya yang bernama Roger untuk bermain permainan "Kata dalam Kotak". Permainannya sangat sederhana, Roger hanya perlu menjawab apakah kata yang disebutkan oleh Pak Samsul terdapat di dalam Kotak berukuran m x n. Suatu kata dikatakan terdapat di dalam kotak apabila kata tersebut bisa dibentuk oleh huruf-huruf di dalam kotak secara menurun ataupun ke samping kanan.</div>
+                    <div>Pak Samsul memiliki peternakan ayam. Karena ayam-ayam yang Pak Samsul bukan lah ayam biasa, Ia pun ingin menguji salah satu ayam nya yang bernama Roger untuk bermain permainan "Kata dalam Kotak". Permainannya sangat sederhana, Roger hanya perlu menjawab apakah kata yang disebutkan oleh Pak Samsul terdapat di dalam Kotak berukuran <code>m x n</code>. Suatu kata dikatakan terdapat di dalam kotak apabila kata tersebut bisa dibentuk oleh huruf-huruf di dalam kotak secara menurun ataupun ke samping kanan.</div>
                 </div>
                 <br>
                 <div>
@@ -162,30 +162,30 @@ const problemSeed = async() => {
                     <div>
                         <h4>Contoh 1</h4>
                         <div style="padding-left: .5rem; border-left: 1px solid #ddd;">
-                            <b>Input: </b> kata = "roger", kotak = [["b", "c", "r", "o"], ["c", "z", "o", "a"], ["f", "h", "g", "e"], ["j", "i", "e", "p"], ["t", "s", "r", "k"]]
+                            <b>Input: </b> <code>kata = "roger", kotak = [["b", "c", "r", "o"], ["c", "z", "o", "a"], ["f", "h", "g", "e"], ["j", "i", "e", "p"], ["t", "s", "r", "k"]]</code>
                             <br>
-                            <b>Output: </b> true
+                            <b>Output: </b> <code>true</code>
                             <br>
-                            <b>Penjelasan: </b> kata "roger" bisa dibentuk secara menurun dengan huruf-huruf dari kotak[0][2], kotak[1][2], kotak[2][2], kotak[3][2], kotak[4][2]
+                            <b>Penjelasan: </b> <code>kata "roger" bisa dibentuk secara menurun dengan huruf-huruf dari kotak[0][2], kotak[1][2], kotak[2][2], kotak[3][2], kotak[4][2]</code>
                         </div>
                     </div>
                     <br>
                     <div>
                         <h4>Contoh 2</h4>
                         <div style="padding-left: .5rem; border-left: 1px solid #ddd;">
-                            <b>Input: </b> kata = "mawar"
+                            <b>Input: </b> <code>kata = "mawar", kotak = [["c", "o", "v", "y", "n"], ["m", "a", "y", "a", "r"], ["l", "k", "t", "f", "g"]]</code>
                             <br>
-                            <b>Output: </b> false
+                            <b>Output: </b> <code>false</code>
                             <br>
-                            <b>Penjelasan: </b> kata "mawar" tidak dapat dibentuk oleh huruf-huruf dari kotak secara manurun maupun ke samping kanan
+                            <b>Penjelasan: </b> <code>kata "mawar" tidak dapat dibentuk oleh huruf-huruf dari kotak secara manurun maupun ke samping kanan</code>
                         </div>
                     </div>
                 </div>
                 <br>
                 <div>
                     <h3>Batasan</h3>
-                    <div>• 1 <= kata.length <= 7</div>
-                    <div>• 1 <= m, n <= 7</div>
+                    <div>• <code>1 <= kata.length <= 7</code></div>
+                    <div>• <code>1 <= m, n <= 7</code></div>
                 </div>
             </div>`,
             difficulty: "Hard",
@@ -319,52 +319,52 @@ const testCaseSeeder = async() => {
     const testCase3 = [
         {
             problem_id: 3,
-            input: 'roger, [["b", "c", "r", "o"], ["c", "z", "o", "a"], ["f", "h", "g", "e"], ["j", "i", "e", "p"], ["t", "s", "r", "k"]]',
+            input: '"roger", [["b", "c", "r", "o"], ["c", "z", "o", "a"], ["f", "h", "g", "e"], ["j", "i", "e", "p"], ["t", "s", "r", "k"]]',
             expected_output: "true"
         },
         {
             problem_id: 3,
-            input: 'mawar, [["c", "o", "v", "y", "n"], ["m", "a", "y", "a", "r"], ["l", "k", "t", "f", "g"]]',
+            input: '"mawar", [["c", "o", "v", "y", "n"], ["m", "a", "y", "a", "r"], ["l", "k", "t", "f", "g"]]',
             expected_output: "false"
         },
         {
             problem_id: 3,
-            input: 'a, [["t", "a", "u", "q", "n"], ["m", "x", "y", "r", "r"], ["b", "f", "t", "f", "q"]]',
+            input: '"a", [["t", "a", "u", "q", "n"], ["m", "x", "y", "r", "r"], ["b", "f", "t", "f", "q"]]',
             expected_output: "true"
         },
         {
             problem_id: 3,
-            input: 'oval, [["o", "o", "v"], ["v", "a", "y"], ["a", "k", "t"], ["l", "k", "t"]]',
+            input: '"oval", [["o", "o", "v"], ["v", "a", "y"], ["a", "k", "t"], ["l", "k", "t"]]',
             expected_output: "true"
         },
         {
             problem_id: 3,
-            input: 'abcdefg, [["z", "x", "e", "k", "u", "y", "n"], ["j", "a", "s", "a", "p", "b", "h"]]',
+            input: '"abcdefg", [["z", "x", "e", "k", "u", "y", "n"], ["j", "a", "s", "a", "p", "b", "h"]]',
             expected_output: "false"
         },
         {
             problem_id: 3,
-            input: 'rhgbtqm, [["e", "c", "r"], ["r", "r", "h"], ["k", "p", "g"], ["s", "u", "b"], ["z", "v", "t"], ["q", "k", "q"], ["l", "r", "m"]]',
+            input: '"rhgbtqm", [["e", "c", "r"], ["r", "r", "h"], ["k", "p", "g"], ["s", "u", "b"], ["z", "v", "t"], ["q", "k", "q"], ["l", "r", "m"]]',
             expected_output: "true"
         },
         {
             problem_id: 3,
-            input: 'aa, [["b", "h"], ["w", "i"]]',
+            input: '"aa", [["b", "h"], ["w", "i"]]',
             expected_output: "false"
         },
         {
             problem_id: 3,
-            input: 'kgdet, [["r", "t", "v", "y", "g"], ["v", "d", "d", "d", "w"], ["v", "q", "r", "f", "m"]]',
+            input: '"kgdet", [["r", "t", "v", "y", "g"], ["v", "d", "d", "d", "w"], ["v", "q", "r", "f", "m"]]',
             expected_output: "false"
         },
         {
             problem_id: 3,
-            input: 'plmnb, [["r", "t", "c", "e"], ["e", "f", "g", "g"]]',
+            input: '"plmnb", [["r", "t", "c", "e"], ["e", "f", "g", "g"]]',
             expected_output: "false"
         },
         {
             problem_id: 3,
-            input: 'dede, [["c", "d", "e", "d", "e", "n"], ["x", "x", "y", "a", "t", "q"], ["f", "e", "t", "f", "i", "z"]]',
+            input: '"dede", [["c", "d", "e", "d", "e", "n"], ["x", "x", "y", "a", "t", "q"], ["f", "e", "t", "f", "i", "z"]]',
             expected_output: "true"
         }
     ]
