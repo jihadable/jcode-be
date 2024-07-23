@@ -142,6 +142,54 @@ const problemSeed = async() => {
             </div>`,
             difficulty: "Medium",
             function_name: "segitigaWarna"
+        },
+        {
+            title: "Kata dalam Kotak",
+            description: 
+            `<div>
+                <div>
+                    <h3>Deskripsi</h3>
+                    <div>Pak Samsul memiliki peternakan ayam. Karena ayam-ayam yang Pak Samsul bukan lah ayam biasa, Ia pun ingin menguji salah satu ayam nya yang bernama Roger untuk bermain permainan "Kata dalam Kotak". Permainannya sangat sederhana, Roger hanya perlu menjawab apakah kata yang disebutkan oleh Pak Samsul terdapat di dalam Kotak berukuran m x n. Suatu kata dikatakan terdapat di dalam kotak apabila kata tersebut bisa dibentuk oleh huruf-huruf di dalam kotak secara menurun ataupun ke samping kanan.</div>
+                </div>
+                <br>
+                <div>
+                    <h3>Tipe Data Input</h3>
+                    <div>• kata: string</div>
+                    <div>• kotak: array dua dimensi yang berisi huruf</div>
+                </div>
+                <br>
+                <div>
+                    <div>
+                        <h4>Contoh 1</h4>
+                        <div style="padding-left: .5rem; border-left: 1px solid #ddd;">
+                            <b>Input: </b> kata = "roger", kotak = [["b", "c", "r", "o"], ["c", "z", "o", "a"], ["f", "h", "g", "e"], ["j", "i", "e", "p"], ["t", "s", "r", "k"]]
+                            <br>
+                            <b>Output: </b> true
+                            <br>
+                            <b>Penjelasan: </b> kata "roger" bisa dibentuk secara menurun dengan huruf-huruf dari kotak[0][2], kotak[1][2], kotak[2][2], kotak[3][2], kotak[4][2]
+                        </div>
+                    </div>
+                    <br>
+                    <div>
+                        <h4>Contoh 2</h4>
+                        <div style="padding-left: .5rem; border-left: 1px solid #ddd;">
+                            <b>Input: </b> kata = "mawar"
+                            <br>
+                            <b>Output: </b> false
+                            <br>
+                            <b>Penjelasan: </b> kata "mawar" tidak dapat dibentuk oleh huruf-huruf dari kotak secara manurun maupun ke samping kanan
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <div>
+                    <h3>Batasan</h3>
+                    <div>• 1 <= kata.length <= 7</div>
+                    <div>• 1 <= m, n <= 7</div>
+                </div>
+            </div>`,
+            difficulty: "Hard",
+            function_name: "kataDalamKotak"
         }
     ]
 
@@ -162,7 +210,7 @@ const problemSeed = async() => {
 const testCaseSeeder = async() => {
     const query = "INSERT INTO test_cases (problem_id, input, expected_output) VALUES (?, ?, ?)"
 
-    const testCases = [
+    const testCase1 = [
         {
             problem_id: 1,
             input: "5",
@@ -187,7 +235,10 @@ const testCaseSeeder = async() => {
             problem_id: 1,
             input: "20",
             expected_output: "101902"
-        },
+        }
+    ]
+
+    const testCase2 = [
         {
             problem_id: 2,
             input: '["M"]',
@@ -240,6 +291,21 @@ const testCaseSeeder = async() => {
         }
     ]
 
+    const testCase3 = [
+        {
+            problem_id: 3,
+            input: 'roger, [["b", "c", "r", "o"], ["c", "z", "o", "a"], ["f", "h", "g", "e"], ["j", "i", "e", "p"], ["t", "s", "r", "k"]]',
+            expected_output: "true"
+        },
+        {
+            problem_id: 3,
+            input: 'mawar, [["c", "o", "v", "y", "n"], ["m", "a", "y", "a", "r"], ["l", "k", "t", "f", "g"]]',
+            expected_output: "true"
+        }
+    ]
+
+    const testCases = [...testCase1, ...testCase2, ...testCase3]
+
     testCases.forEach(async(testCase) => {
         await db.query(query, [
             testCase.problem_id, 
@@ -276,6 +342,17 @@ const defaultCodesSeeder = async() => {
             default_code: 
             `def segitigaWarna(barisWarna):`
         },
+        {
+            problem_id: 3,
+            language: "javascript",
+            default_code: `function kataDalamKotak(kata, kotak){\n\n}`
+        },
+        {
+            problem_id: 3,
+            language: "python",
+            default_code: 
+            `def kataDalamKotak(kata, kotak):`
+        }
     ]
 
     defaultCodes.forEach(async(defaultCode) => {
