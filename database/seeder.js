@@ -213,6 +213,16 @@ const testCaseSeeder = async() => {
     const testCase1 = [
         {
             problem_id: 1,
+            input: "1",
+            expected_output: "1"
+        },
+        {
+            problem_id: 1,
+            input: "3",
+            expected_output: "3"
+        },
+        {
+            problem_id: 1,
             input: "5",
             expected_output: "11"
         },
@@ -223,13 +233,28 @@ const testCaseSeeder = async() => {
         },
         {
             problem_id: 1,
+            input: "12",
+            expected_output: "778"
+        },
+        {
+            problem_id: 1,
             input: "15",
             expected_output: "4841"
         },
         {
             problem_id: 1,
+            input: "16",
+            expected_output: "8904"
+        },
+        {
+            problem_id: 1,
             input: "17",
             expected_output: "16377"
+        },
+        {
+            problem_id: 1,
+            input: "18",
+            expected_output: "30122"
         },
         {
             problem_id: 1,
@@ -300,6 +325,46 @@ const testCaseSeeder = async() => {
         {
             problem_id: 3,
             input: 'mawar, [["c", "o", "v", "y", "n"], ["m", "a", "y", "a", "r"], ["l", "k", "t", "f", "g"]]',
+            expected_output: "false"
+        },
+        {
+            problem_id: 3,
+            input: 'a, [["t", "a", "u", "q", "n"], ["m", "x", "y", "r", "r"], ["b", "f", "t", "f", "q"]]',
+            expected_output: "true"
+        },
+        {
+            problem_id: 3,
+            input: 'oval, [["o", "o", "v"], ["v", "a", "y"], ["a", "k", "t"], ["l", "k", "t"]]',
+            expected_output: "true"
+        },
+        {
+            problem_id: 3,
+            input: 'abcdefg, [["z", "x", "e", "k", "u", "y", "n"], ["j", "a", "s", "a", "p", "b", "h"]]',
+            expected_output: "false"
+        },
+        {
+            problem_id: 3,
+            input: 'rhgbtqm, [["e", "c", "r"], ["r", "r", "h"], ["k", "p", "g"], ["s", "u", "b"], ["z", "v", "t"], ["q", "k", "q"], ["l", "r", "m"]]',
+            expected_output: "true"
+        },
+        {
+            problem_id: 3,
+            input: 'aa, [["b", "h"], ["w", "i"]]',
+            expected_output: "false"
+        },
+        {
+            problem_id: 3,
+            input: 'kgdet, [["r", "t", "v", "y", "g"], ["v", "d", "d", "d", "w"], ["v", "q", "r", "f", "m"]]',
+            expected_output: "false"
+        },
+        {
+            problem_id: 3,
+            input: 'plmnb, [["r", "t", "c", "e"], ["e", "f", "g", "g"]]',
+            expected_output: "false"
+        },
+        {
+            problem_id: 3,
+            input: 'dede, [["c", "d", "e", "d", "e", "n"], ["x", "x", "y", "a", "t", "q"], ["f", "e", "t", "f", "i", "z"]]',
             expected_output: "true"
         }
     ]
