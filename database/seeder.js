@@ -36,7 +36,9 @@ const problemSeed = async() => {
             `<div>
                 <div>
                     <h3>Deskripsi</h3>
-                    <div>Ketika berkunjung ke negara Italia, Pak Samsul bertemu dengan seorang Matematikawan bernama Prof. Paulo Tribonacci. Prof Paulo ini menciptakan sebuah deret bilangan Tribonacci di mana suatu bilangan merupakan hasil penjumlahan dari 3 bilangan sebelum nya. Karena Pak Samsul adalah orang yang penasaran, Ia pun ingin mencoba menjawab deret bilangan <code>ke-n</code> di mana <code>n</code> adalah angka yang disebutkan oleh Prof Paulo. Buatlah program untuk membantu Pak Samsul menjawab deret bilangan dari setiap angka yang disebutkan Prof Paulo.</div>
+                    <div>Ketika berkunjung ke negara Italia, Pak Samsul bertemu dengan seorang Matematikawan bernama Prof. Paulo Tribonacci. Prof Paulo ini menciptakan sebuah deret bilangan Tribonacci di mana suatu bilangan merupakan hasil penjumlahan dari 3 bilangan sebelum nya. Karena Pak Samsul adalah orang yang penasaran, Ia pun ingin mencoba menjawab deret bilangan ke-n di mana n adalah angka yang disebutkan oleh Prof Paulo.</div>
+                    <br>
+                    <div>Buatlah program untuk membantu Pak Samsul menjawab deret bilangan dari setiap angka yang disebutkan Prof Paulo!</div>
                 </div>
                 <br>
                 <div>
@@ -52,7 +54,7 @@ const problemSeed = async() => {
                             <br>
                             <b>Output: </b> <code>6</code>
                             <br>
-                            <b>Penjelasan: </b> <code>1 + 2 + 3 = 6</code>
+                            <b>Penjelasan: </b> <code>1 + 2 + 3 = 6.</code>
                         </div>
                     </div>
                     <br>
@@ -63,14 +65,14 @@ const problemSeed = async() => {
                             <br>
                             <b>Output: </b> <code>11</code>
                             <br>
-                            <b>Penjelasan: </b> <code>2 + 3 + 6 = 11</code>
+                            <b>Penjelasan: </b> <code>2 + 3 + 6 = 11.</code>
                         </div>
                     </div>
                 </div>
                 <br>
                 <div>
                     <h3>Batasan</h3>
-                    <div>• <code>1 <= n <= 20</code></div>
+                    <div>• <code>1 <= n <= 100</code></div>
                 </div>
             </div>`,
             difficulty: "Easy",
@@ -103,12 +105,14 @@ const problemSeed = async() => {
                         </code>
                     </div>
                     <br>
-                    <div>Mengetahui hal ini, Pak Samsul berinisiatif untuk memberikan Mawar permainan warna bernama segitiga warna. Pak Samsul memberikan 1 baris berisi warna-warna favorit Mawar. Mawar lalu mencampur setiap 2 warna yang bersebelahan sampai akhir nya hanya tersisa 1 warna saja. Mawar harus bisa menjawab 1 warna terakhir tersebut dengan benar. Buatlah program untuk membantu Mawar menyelesaikan permain segitiga warna ini.</div>
+                    <div>Mengetahui hal ini, Pak Samsul berinisiatif untuk memberikan Mawar permainan warna bernama segitiga warna. Pak Samsul memberikan 1 baris berisi warna-warna favorit Mawar. Mawar lalu mencampur setiap 2 warna yang bersebelahan sampai akhir nya hanya tersisa 1 warna saja. Mawar harus bisa menjawab 1 warna terakhir tersebut dengan benar.</div>
+                    <br>
+                    <div>Buatlah program untuk membantu Mawar menyelesaikan permainan segitiga warna ini!</div>
                 </div>
                 <br>
                 <div>
                     <h3>Tipe Data Input</h3>
-                    <div>• barisWarna: array of string</div>
+                    <div>• barisWarna: array berisi string</div>
                 </div>
                 <br>
                 <div>
@@ -119,7 +123,7 @@ const problemSeed = async() => {
                             <br>
                             <b>Output: </b> <code>H</code>
                             <br>
-                            <b>Penjelasan: </b> <code>M + B = H</code>
+                            <b>Penjelasan: </b> <code>M + B = H.</code>
                         </div>
                     </div>
                     <br>
@@ -130,14 +134,14 @@ const problemSeed = async() => {
                             <br>
                             <b>Output: </b> <code>M</code>
                             <br>
-                            <b>Penjelasan: </b> <code>(B + K) + (K + H) = M + M = M</code>
+                            <b>Penjelasan: </b> <code>(B + K) + (K + H) = M + M = M.</code>
                         </div>
                     </div>
                 </div>
                 <br>
                 <div>
                     <h3>Batasan</h3>
-                    <div>• <code>1 <= barisWarna.length <= 10</code></div>
+                    <div>• <code>1 <= barisWarna.length <= 100</code></div>
                 </div>
             </div>`,
             difficulty: "Medium",
@@ -149,13 +153,17 @@ const problemSeed = async() => {
             `<div>
                 <div>
                     <h3>Deskripsi</h3>
-                    <div>Pak Samsul memiliki peternakan ayam. Karena ayam-ayam yang Pak Samsul bukan lah ayam biasa, Ia pun ingin menguji salah satu ayam nya yang bernama Roger untuk bermain permainan "Kata dalam Kotak". Permainannya sangat sederhana, Roger hanya perlu menjawab apakah kata yang disebutkan oleh Pak Samsul terdapat di dalam Kotak berukuran <code>m x n</code>. Suatu kata dikatakan terdapat di dalam kotak apabila kata tersebut bisa dibentuk oleh huruf-huruf di dalam kotak secara menurun ataupun ke samping kanan.</div>
+                    <div>Pak Samsul memiliki peternakan ayam. Karena ayam-ayam yang Pak Samsul bukan lah ayam biasa, Ia pun ingin menguji salah satu ayam nya yang bernama Roger untuk bermain permainan "Kata dalam Kotak".</div>
+                    <br>
+                    <div>Permainannya sangat sederhana, Roger hanya perlu menjawab apakah kata yang disebutkan oleh Pak Samsul terdapat di dalam Kotak berukuran <code>m x n</code>. Suatu kata dikatakan terdapat di dalam kotak apabila kata tersebut bisa dibentuk oleh huruf-huruf di dalam kotak secara menurun ataupun ke samping kanan.</div>
+                    <br>
+                    <div>Buatlah program untuk membantu Roger menyelesaikan permainan Kata dalam Kotak ini!</div>
                 </div>
                 <br>
                 <div>
                     <h3>Tipe Data Input</h3>
                     <div>• kata: string</div>
-                    <div>• kotak: array dua dimensi yang berisi huruf</div>
+                    <div>• kotak: array dua dimensi yang berisi string</div>
                 </div>
                 <br>
                 <div>
@@ -166,7 +174,7 @@ const problemSeed = async() => {
                             <br>
                             <b>Output: </b> <code>true</code>
                             <br>
-                            <b>Penjelasan: </b> <code>kata "roger" bisa dibentuk secara menurun dengan huruf-huruf dari kotak[0][2], kotak[1][2], kotak[2][2], kotak[3][2], kotak[4][2]</code>
+                            <b>Penjelasan: </b> <code>Kata "roger" bisa dibentuk secara menurun dengan huruf-huruf dari kotak[0][2], kotak[1][2], kotak[2][2], kotak[3][2], kotak[4][2].</code>
                         </div>
                     </div>
                     <br>
@@ -177,19 +185,151 @@ const problemSeed = async() => {
                             <br>
                             <b>Output: </b> <code>false</code>
                             <br>
-                            <b>Penjelasan: </b> <code>kata "mawar" tidak dapat dibentuk oleh huruf-huruf dari kotak secara manurun maupun ke samping kanan</code>
+                            <b>Penjelasan: </b> <code>Kata "mawar" tidak dapat dibentuk oleh huruf-huruf dari kotak secara manurun maupun ke samping kanan.</code>
                         </div>
                     </div>
                 </div>
                 <br>
                 <div>
                     <h3>Batasan</h3>
-                    <div>• <code>1 <= kata.length <= 7</code></div>
-                    <div>• <code>1 <= m, n <= 7</code></div>
+                    <div>• <code>1 <= kata.length <= 100</code></div>
+                    <div>• <code>1 <= m, n <= 100</code></div>
                 </div>
             </div>`,
             difficulty: "Hard",
             function_name: "kataDalamKotak"
+        },
+        {
+            title: "Pembagian Permen",
+            description: 
+            `<div>
+                <div>
+                    <h3>Deskripsi</h3>
+                    <div>Karena Hari Ayam Nasional telah tiba, Pak Samsul ingin membagikan permen ke setiap ayam peliharaannya. Setiap ayam akan mendapatkan permen sebanyak nilai yang diperoleh dari nama mereka.</div>
+                    <br>
+                    <div>Contoh: Seekor Ayam bernama "Roger" akan mendapatkan nilai sebesar = R(18) + o(15) + g(7) + e(5) + r(18) = 73.</div>
+                    <br>
+                    <div>Namun, Pak Samsul adalah orang yang adil, Ia ingin setiap ayam nya memiliki jumlah permen yang sama. Untuk melakukan hal itu, Pak Samsul perlu membagikan permen ke setiap ayam sesuai dengan jumlah maksimal permen yang mungkin didapatkan oleh satu ekor ayam.</div>
+                    <br>
+                    <div>Buatlah program untuk membantu Pak Samsul mengetahui jumlah permen yang perlu Ia siapkan untuk membahagiakan setiap ayam peliharaanya!</div>
+                </div>
+                <br>
+                <div>
+                    <h3>Tipe Data Input</h3>
+                    <div>• ayam: array berisi string</div>
+                </div>
+                <br>
+                <div>
+                    <div>
+                        <h4>Contoh 1</h4>
+                        <div style="padding-left: .5rem; border-left: 1px solid #ddd;">
+                            <b>Input: </b> <code>ayam = ["Roger", "Bambang", "Yuli"]</code>
+                            <br>
+                            <b>Output: </b> <code>219</code>
+                            <br>
+                            <b>Penjelasan: </b> <code>Karena ayam yang mendapatkan permen terbanyak adalah Roger, maka Pak Samsul perlu menyiapkan sebanyak (73 * 3) permen.</code>
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <div>
+                    <h3>Batasan</h3>
+                    <div>• <code>1 <= ayam.length <= 100</code></div>
+                </div>
+            </div>`,
+            difficulty: "Easy",
+            function_name: "pembagianPermen"
+        },
+        {
+            title: "Pot Bunga",
+            description:
+            `<div>
+                <div>
+                    <h3>Deskripsi</h3>
+                    <div>Akhir-akhir ini Pak Samsul memiliki hobi baru yaitu mengoleksi bunga. Ia memiliki aturan unik ketika menanam bunga dalam pot yaitu tidak boleh ada dua bunga yang ditanam di pot yang bersebelahan.</div>
+                    <br>
+                    <div>Suatu hari, Ia dihadiahkan sejumlah bunga oleh sahabat pena nya ada di Argentina. Karena masih banyak pot bunga yang kosong, Pak Samsul pun berencana untuk mengisi nya dengan bunga-bunga baru nya. Pak Samsul ingin mengetahui apakah semua bunga baru nya bisa ditanam di pot-pot bunga yang ada.</div>
+                    <br>
+                    <div>Buatlah program untuk memabantu Pak Samsul tanpa melanggar aturan unik nya!</div>
+                </div>
+                <br>
+                <div>
+                    <h3>Tipe Data Input</h3>
+                    <div>• deretanPot: array berisi angka 1 (pot berisi bunga) atau 0 (pot masih kosong)</div>
+                    <div>• banyakBunga: Integer</div>
+                </div>
+                <br>
+                <div>
+                    <div>
+                        <h4>Contoh 1</h4>
+                        <div style="padding-left: .5rem; border-left: 1px solid #ddd;">
+                            <b>Input: </b> <code>deretanPot = [1, 0, 0, 0, 1], banyakBunga = 1</code>
+                            <br>
+                            <b>Output: </b> <code>true</code>
+                            <br>
+                            <b>Penjelasan: </b> <code>Setelah diisi dengan 1 bunga, deretanPot akan menjadi = [1, 0, 1, 0, 1].</code>
+                        </div>
+                    </div>
+                    <br>
+                    <div>
+                        <h4>Contoh 2</h4>
+                        <div style="padding-left: .5rem; border-left: 1px solid #ddd;">
+                            <b>Input: </b> <code>deretanPot = [1, 0, 0, 0, 1], banyakBunga = 2</code>
+                            <br>
+                            <b>Output: </b> <code>false</code>
+                            <br>
+                            <b>Penjelasan: </b> <code>Pengisian 2 bunga ke dalam deretanPot akan melanggar aturan Pak Samsul.</code>
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <div>
+                    <h3>Batasan</h3>
+                    <div>• <code>1 <= deretanPot.length <= 100</code></div>
+                    <div>• <code>1 <= banyakBunga.length <= 100</code></div>
+                </div>
+            </div>`,
+            difficulty: "Medium",
+            function_name: "potBunga"
+        },
+        {
+            title: "Perlombaan Lari",
+            description:
+            `<div>
+                <div>
+                    <h3>Deskripsi</h3>
+                    <div>Pak Samsul sedang mengadakan lomba lari untuk ayam-ayam peliharaannya. Pak Samsul ingin membagi peserta lomba menjadi beberapa kelompok. Pembagian kelompok ditentukan berdasarkan anagram dari setiap nama peserta. 2 nama peserta disebut anagram ketika salah satu nama dapat disusun ulang dan membentuk nama lain nya.</div>
+                    <br>
+                    <div>Contoh: "hantu" dan "hutan" adalah anagram.</div>
+                    <br>
+                    <div>Buatlah program untuk membantu Pak Samsul mengetahui jumlah kelompok yang terbentuk sesuai dengan aturan pembagian!</div>
+                </div>
+                <br>
+                <div>
+                    <h3>Tipe Data Input</h3>
+                    <div>• pesertaLomba: array berisi string</div>
+                </div>
+                <br>
+                <div>
+                    <div>
+                        <h4>Contoh 1</h4>
+                        <div style="padding-left: .5rem; border-left: 1px solid #ddd;">
+                            <b>Input: </b> <code>pesertaLomba = ["Roger", "Lia", "Budi", "Ali"]</code>
+                            <br>
+                            <b>Output: </b> <code>3</code>
+                            <br>
+                            <b>Penjelasan: </b> <code>kelompok yang terbentuk = [["Roger"], ["Lia", "Ali"], ["Budi"]].</code>
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <div>
+                    <h3>Batasan</h3>
+                    <div>• <code>1 <= pesertaLomba.length <= 100</code></div>
+                </div>
+            </div>`,
+            difficulty: "Hard",
+            function_name: "perlombaanLari"
         }
     ]
 
@@ -369,6 +509,18 @@ const testCaseSeeder = async() => {
         }
     ]
 
+    const testCase4 = [
+
+    ]
+
+    const testCase5 = [
+
+    ]
+
+    const testCase6 = [
+
+    ]
+
     const testCases = [...testCase1, ...testCase2, ...testCase3]
 
     testCases.forEach(async(testCase) => {
@@ -417,6 +569,40 @@ const defaultCodesSeeder = async() => {
             language: "python",
             default_code: 
             `def kataDalamKotak(kata, kotak):`
+        },
+        {
+            problem_id: 4,
+            language: "javascript",
+            default_code: 
+            `function pembagianPermen(ayam){\n\n}`
+        },
+        {
+            problem_id: 4,
+            language: "python",
+            default_code: 
+            `def pembagianPermen(ayam):`
+        },
+        {
+            problem_id: 5,
+            language: "javascript",
+            default_code: `function potBunga(deretanPot, banyakBunga){\n\n}`
+        },
+        {
+            problem_id: 5,
+            language: "python",
+            default_code: 
+            `def potBunga(deretanPot, banyakBunga):`
+        },
+        {
+            problem_id: 6,
+            language: "javascript",
+            default_code: `function perlombaanLari(pesertaLomba){\n\n}`
+        },
+        {
+            problem_id: 6,
+            language: "python",
+            default_code: 
+            `def perlombaanLari(pesertaLomba):`
         }
     ]
 
