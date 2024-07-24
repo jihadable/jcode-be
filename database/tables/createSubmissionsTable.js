@@ -11,7 +11,7 @@ const createSubmissionsTable = async() => {
         user_id     INT NOT NULL,
         problem_id  INT NOT NULL,
         language    VARCHAR(255) NOT NULL,
-        status      VARCHAR(255) NOT NULL,
+        status      TINYINT(1) NOT NULL,
         created_at  TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
         updated_at  TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
     )`

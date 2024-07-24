@@ -37,7 +37,7 @@ const User = {
 
     async update(id, bio){
         const updateQuery = "UPDATE users SET bio = ? WHERE id = ?"
-        db.query(updateQuery, [bio, id])
+        await db.query(updateQuery, [bio, id])
 
         const selectQuery = "SELECT username, email, bio FROM users WHERE id = ?"
         const [rows] = await db.query(selectQuery, [id])

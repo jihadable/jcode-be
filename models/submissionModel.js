@@ -20,6 +20,16 @@ const Submission = {
         return rows[0]
     },
 
+    async update(submission){
+        const updateQuery = "UPDATE submissions SET language = ?, status = ? WHERE user_id = ? AND problem_id = ?"
+        await db.query(updateQuery, [submission.language, submission.status, submission.user_id, submission.problem_id])
+
+        const selectQuery = "SELECT * FROM submissions WHERE user_id = ? AND problem_id = ?"
+        const [rows] = await db.query(selectQuery, [submission.user_id, submission.problem_id])
+
+        return rows[0]
+    },
+
     response(submission){
         return {
             user_id: submission.user_id,

@@ -1,5 +1,5 @@
 const { Router } = require("express")
-const { getUserProfile, register, login } = require("../controllers/userController")
+const { getUserProfile, register, login, updateUserProfile } = require("../controllers/userController")
 const verifyTokenMiddlware = require("../middlewares/verifyTokenMiddleware")
 
 const userRouter = Router()
@@ -10,6 +10,6 @@ userRouter.post("/register", register)
 
 userRouter.post("/login", login)
 
-// userRouter.patch("/", )
+userRouter.patch("/", verifyTokenMiddlware, updateUserProfile)
 
 module.exports = userRouter

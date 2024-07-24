@@ -89,7 +89,7 @@ const login = async(req, res) => {
 
 const updateUserProfile = async(req, res) => {
     const updateUserProfileSchema = Joi.object({
-        user_id: Joi.string().required(),
+        user_id: Joi.number().required(),
         bio: Joi.string()
     })
 
