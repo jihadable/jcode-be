@@ -7,6 +7,7 @@ const testCaseRouter = require("./routes/testCaseRoute")
 const { db } = require("./database/database")
 const defaultCodeRouter = require("./routes/defaultCodeRoute")
 const submissionRouter = require("./routes/submissionRoute")
+const rateLimit = require('express-rate-limit')
 
 require("dotenv").config()
 
@@ -21,6 +22,20 @@ app.use("/images", express.static(path.join(__dirname, "images")))
 app.get("/", (req, res) => {
     res.sendFile(path.join(__dirname, "views", "index.html"))
 })
+
+// rate limit
+const apiLimiter = rateLimit({
+    windowMs: 15 * 60 * 1000,
+    max: 100,
+    message: {
+        status: 429,
+        ok: false,
+        message: "Too many requests from this IP, please try again after 15 minutes"
+    },
+    statusCode: 429
+})
+
+app.use("/api", apiLimiter)
 
 // user route
 app.use("/api/users", userRouter)
