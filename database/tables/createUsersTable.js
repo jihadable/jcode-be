@@ -8,9 +8,11 @@ const createUsersTable = async() => {
     const createQuery = 
     `CREATE TABLE users (
         id          INT AUTO_INCREMENT PRIMARY KEY,
-        username    VARCHAR(255) NOT NULL UNIQUE,
+        username    VARCHAR(255) NOT NULL,
         email       VARCHAR(255) NOT NULL UNIQUE,
         password    VARCHAR(255) NOT NULL,
+        birth       DATE NOT NULL,
+        gender      TINYINT(1) NOT NULL,
         bio         TEXT,
         created_at  TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
         updated_at  TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP

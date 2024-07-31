@@ -90,7 +90,10 @@ const login = async(req, res) => {
 const updateUserProfile = async(req, res) => {
     const updateUserProfileSchema = Joi.object({
         user_id: Joi.number().required(),
-        bio: Joi.string()
+        username: Joi.string().required(),
+        birth: Joi.date().required(),
+        gender: Joi.number().min(0).max(1).required(),
+        bio: Joi.string().allow(null)
     })
 
     const { error } = updateUserProfileSchema.validate(req.body)
@@ -100,9 +103,9 @@ const updateUserProfile = async(req, res) => {
     }
 
     try {
-        const { user_id, bio } = req.body
+        const { user_id, ...data } = req.body
 
-        const user = await User.update(user_id, bio)
+        const user = await User.update(user_id, data)
 
         if (!user){
             return res.status(401).json(defaultResponse(401, false, "Token invalid"))

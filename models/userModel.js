@@ -2,14 +2,16 @@ const { db } = require("../database/database")
 
 // user
 // +id
-// +name
+// +username
 // +email
 // +password
+// +birth
+// +gender
 // +bio
 
 const User = {
     async findById(id){
-        const query = "SELECT username, email, bio FROM users WHERE id = ?"
+        const query = "SELECT * FROM users WHERE id = ?"
 
         const [rows] = await db.query(query, [id])
 
@@ -35,11 +37,11 @@ const User = {
         return rows[0]
     },
 
-    async update(id, bio){
-        const updateQuery = "UPDATE users SET bio = ? WHERE id = ?"
-        await db.query(updateQuery, [bio, id])
+    async update(id, data){
+        const updateQuery = "UPDATE users SET username = ?, birth = ?, gender = ?, bio = ? WHERE id = ?"
+        await db.query(updateQuery, [bio, data.username, data.birth, data.gender, data.bio])
 
-        const selectQuery = "SELECT username, email, bio FROM users WHERE id = ?"
+        const selectQuery = "SELECT * FROM users WHERE id = ?"
         const [rows] = await db.query(selectQuery, [id])
 
         return rows[0]
