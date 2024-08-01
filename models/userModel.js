@@ -27,11 +27,11 @@ const User = {
     },
 
     async create(user){
-        const insertQuery = "INSERT INTO users (username, email, password) VALUES (?, ?, ?)"
-        const [insertResult] = await db.query(insertQuery, [user.username, user.email, user.password])
+        const insertQuery = "INSERT INTO users (username, email, password, birth, gender) VALUES (?, ?, ?, ?, ?)"
+        const [insertResult] = await db.query(insertQuery, [user.username, user.email, user.password, user.birth, user.gender])
 
         const id = insertResult.insertId
-        const selectQuery = "SELECT id, username, email, bio FROM users WHERE id = ?"
+        const selectQuery = "SELECT * FROM users WHERE id = ?"
         const [rows] = await db.query(selectQuery, [id])
 
         return rows[0]
@@ -39,7 +39,7 @@ const User = {
 
     async update(id, data){
         const updateQuery = "UPDATE users SET username = ?, birth = ?, gender = ?, bio = ? WHERE id = ?"
-        await db.query(updateQuery, [bio, data.username, data.birth, data.gender, data.bio])
+        await db.query(updateQuery, [data.username, data.birth, data.gender, data.bio, id])
 
         const selectQuery = "SELECT * FROM users WHERE id = ?"
         const [rows] = await db.query(selectQuery, [id])
@@ -51,6 +51,8 @@ const User = {
         return {
             username: user.username,
             email: user.email,
+            birth: user.birth,
+            gender: user.gender,
             bio: user.bio
         }
     }

@@ -28,7 +28,9 @@ const register = async(req, res) => {
     const registerSchema = Joi.object({
         username: Joi.string().required(),
         email: Joi.string().email().required(),
-        password: Joi.string().min(8).required()
+        password: Joi.string().min(8).required(),
+        birth: Joi.date().required(),
+        gender: Joi.number().min(0).max(1).required(),
     })
 
     const { error } = registerSchema.validate(req.body)
@@ -104,7 +106,7 @@ const updateUserProfile = async(req, res) => {
 
     try {
         const { user_id, ...data } = req.body
-
+        
         const user = await User.update(user_id, data)
 
         if (!user){
