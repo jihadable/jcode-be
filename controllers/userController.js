@@ -97,13 +97,13 @@ const updateUserProfile = async(req, res) => {
         gender: Joi.number().min(0).max(1).required(),
         bio: Joi.string().allow(null)
     })
-
+    
     const { error } = updateUserProfileSchema.validate(req.body)
-
+    
     if (error){
         return res.status(400).json(defaultResponse(400, false, error.details[0].message))
     }
-
+    
     try {
         const { user_id, ...data } = req.body
         
